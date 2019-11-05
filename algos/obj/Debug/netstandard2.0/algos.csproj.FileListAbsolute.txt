@@ -1,0 +1,9 @@
+c:\playground\algos\algos\bin\Debug\netstandard2.0\algos.deps.json
+c:\playground\algos\algos\bin\Debug\netstandard2.0\algos.dll
+c:\playground\algos\algos\bin\Debug\netstandard2.0\algos.pdb
+c:\playground\algos\algos\obj\Debug\netstandard2.0\algos.csprojAssemblyReference.cache
+c:\playground\algos\algos\obj\Debug\netstandard2.0\algos.csproj.CoreCompileInputs.cache
+c:\playground\algos\algos\obj\Debug\netstandard2.0\algos.AssemblyInfoInputs.cache
+c:\playground\algos\algos\obj\Debug\netstandard2.0\algos.AssemblyInfo.cs
+c:\playground\algos\algos\obj\Debug\netstandard2.0\algos.dll
+c:\playground\algos\algos\obj\Debug\netstandard2.0\algos.pdb

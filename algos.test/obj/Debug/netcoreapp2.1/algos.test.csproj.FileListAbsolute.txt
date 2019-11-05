@@ -1,0 +1,17 @@
+c:\playground\algos\algos.test\bin\Debug\netcoreapp2.1\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+c:\playground\algos\algos.test\bin\Debug\netcoreapp2.1\xunit.runner.reporters.netcoreapp10.dll
+c:\playground\algos\algos.test\bin\Debug\netcoreapp2.1\xunit.runner.utility.netcoreapp10.dll
+c:\playground\algos\algos.test\bin\Debug\netcoreapp2.1\algos.test.deps.json
+c:\playground\algos\algos.test\bin\Debug\netcoreapp2.1\algos.test.runtimeconfig.json
+c:\playground\algos\algos.test\bin\Debug\netcoreapp2.1\algos.test.runtimeconfig.dev.json
+c:\playground\algos\algos.test\bin\Debug\netcoreapp2.1\algos.test.dll
+c:\playground\algos\algos.test\bin\Debug\netcoreapp2.1\algos.test.pdb
+c:\playground\algos\algos.test\bin\Debug\netcoreapp2.1\algos.dll
+c:\playground\algos\algos.test\bin\Debug\netcoreapp2.1\algos.pdb
+c:\playground\algos\algos.test\obj\Debug\netcoreapp2.1\algos.test.csprojAssemblyReference.cache
+c:\playground\algos\algos.test\obj\Debug\netcoreapp2.1\algos.test.csproj.CoreCompileInputs.cache
+c:\playground\algos\algos.test\obj\Debug\netcoreapp2.1\algos.test.AssemblyInfoInputs.cache
+c:\playground\algos\algos.test\obj\Debug\netcoreapp2.1\algos.test.AssemblyInfo.cs
+c:\playground\algos\algos.test\obj\Debug\netcoreapp2.1\algos.test.csproj.CopyComplete
+c:\playground\algos\algos.test\obj\Debug\netcoreapp2.1\algos.test.dll
+c:\playground\algos\algos.test\obj\Debug\netcoreapp2.1\algos.test.pdb

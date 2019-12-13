@@ -11,6 +11,11 @@
     <PackageReference Include="xunit" Version="2.3.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
   </ItemGroup>
+ 
+ <ItemGroup>
+  <Content Include=".\Strings\morganinput.txt" CopyToOutputDirectory="PreserveNewest" />
+  <Content Include=".\Strings\morganresult.txt" CopyToOutputDirectory="PreserveNewest" />
+</ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\algos\algos.csproj" />

@@ -6,7 +6,8 @@ namespace algos.test
     public class JospehusTests
     {
         
-        [Fact]
+        //[Fact]
+        
         public void TestForKnowInput1()
         {
             string[] input= {"3 2"};

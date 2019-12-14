@@ -5,6 +5,7 @@ using System.Linq;
 using System.Diagnostics;
 using algos.test;
 using Xunit.Abstractions;
+using algos.Strings;
 
 public class StringTestDriver
 {
@@ -29,6 +30,21 @@ public class StringTestDriver
 
         Assert.Equal(result[0].Trim(),actual.Trim());
 
+    }
+
+    [Fact]
+    public void LargestNonRepeatingSubstring(){
+        Assert.Equal(3, 
+        LongestSubstringWithNoRepeats.FindLongestSubstringWithNonRepeatingCharacters("dvdf"));
+
+        Assert.Equal(4, 
+        LongestSubstringWithNoRepeats.FindLongestSubstringWithNonRepeatingCharacters("abcd"));
+
+        Assert.Equal(3, 
+        LongestSubstringWithNoRepeats.FindLongestSubstringWithNonRepeatingCharacters("abcbccd"));
+
+        Assert.Equal(2, 
+        LongestSubstringWithNoRepeats.FindLongestSubstringWithNonRepeatingCharacters("abba"));
     }
 
 

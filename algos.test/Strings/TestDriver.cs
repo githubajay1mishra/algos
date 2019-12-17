@@ -47,6 +47,21 @@ public class StringTestDriver
         LongestSubstringWithNoRepeats.FindLongestSubstringWithNonRepeatingCharacters("abba"));
     }
 
+    [Fact]
+    public void RomanToInt(){
+        var converter = new RomanNumeralStringToAlgo();
+
+        Assert.Equal(10, 
+        converter.RomanToInt("X"));
+
+        Assert.Equal(58, 
+        converter.RomanToInt("LVIII"));
+
+        Assert.Equal(4, 
+        converter.RomanToInt("IV"));
+
+    }
+
 
 
 

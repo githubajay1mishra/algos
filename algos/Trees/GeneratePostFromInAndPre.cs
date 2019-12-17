@@ -2,6 +2,13 @@ using System.Collections.Generic;
 
 namespace Trees{
 
+    public class TreeNode<T>
+    {
+        public T Data {get; set;}
+        public TreeNode<T> Left { get; set;}
+        public TreeNode<T> Right { get; set;}
+    }
+
     public class GenerateTree{
 
         public TreeNode<int> BuildTreeV2(int[] inOrder, int[] preOrder, 

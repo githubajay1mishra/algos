@@ -1,9 +1,18 @@
-namespace Trees
-{
-    public class TreeNode<T>
-    {
-        public T Data {get; set;}
-        public TreeNode<T> Left { get; set;}
-        public TreeNode<T> Right { get; set;}
-    }
+namespace algos.Trees{
+
+    public class TreeNode 
+     {
+      public int val;
+      public TreeNode left;
+      public TreeNode right;
+      public TreeNode(int x) { val = x; }
+     }
+
+
+
 }
+
+
+
+    
+

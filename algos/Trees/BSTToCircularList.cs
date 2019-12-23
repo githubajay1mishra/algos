@@ -24,7 +24,42 @@ public class Node
 
 public class BStToCircularSolution {
 
+    private Node last;
+    private Node first;
     
+    public Node TreeToDoublyList(Node root) {
+        // find minimum in the right tree 
+       Helper(root);
+       if(first != null){
+          first.left = last;
+          last.right = first; 
+           
+       } 
+       
+       return first;
+         
+    }
+    
+    private void Helper(Node node){
+        if(node == null){
+            return;
+        }
+        
+        Helper(node.left);
+        
+        if(last != null){
+            last.right = node;
+            node.left = last;
+            
+        }else{
+            first = node;
+        }
+        
+        last = node;
+        Helper(node.right);
+    }
+
+  
 
     
 

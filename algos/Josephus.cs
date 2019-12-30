@@ -38,6 +38,8 @@ namespace algos
             for(int i = 0; i < numberOfTestCases; ++i){
                 Console.WriteLine(output[i]);
             }
+
+            
         }
 
     }

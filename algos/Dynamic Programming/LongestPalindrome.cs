@@ -19,7 +19,7 @@ namespace algos.DynamicProgrammng
                     start = start1;
                 }
 
-                var (length2, start2) = GetLongestPalindromeAroungCenter(s, index, index);
+                var (length2, start2) = GetLongestPalindromeAroungCenter(s, index, index + 1);
 
                  if(length2 > length){
                     length = length2;

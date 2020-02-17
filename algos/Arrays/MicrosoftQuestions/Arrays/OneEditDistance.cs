@@ -8,29 +8,25 @@ namespace algos.Arrays
     {
         public bool IsOneEditDistance(string s, string t)
         {
-            var frequency = new Dictionary<char, int>();
-
-            foreach(var charFromS in s){
-
-                frequency[charFromS] = frequency.ContainsKey(charFromS) ? frequency[charFromS] + 1
-                : 1;
+            if(s.Length > t.Length){
+                return IsOneEditDistance(t, s);
             }
 
-            foreach(var charFromT in t){
-
-                frequency[charFromT] = frequency.ContainsKey(charFromT) ? frequency[charFromT] - 1
-                : -1;
+            if(t.Length - s.Length > 1){
+                return false;
             }
 
-            int diff = 0;
-            foreach(var value in frequency.Values){
-                if(value != 0){
-                    diff++;
-                }               
+            for(int index  = 0; index < s.Length; index++){
+                if(s[index] != t[index]){
+                    if(s.Length == t.Length){
+                        return s.Substring(index + 1).Equals(t.Substring(index + 1));
+                    }
+
+                    return s.Substring(index).Equals(t.Substring(index + 1));
+                }
             }
 
-            return diff == 1 ? true : false;
-
+            return s.Length + 1 == t.Length;
         }
     }
 

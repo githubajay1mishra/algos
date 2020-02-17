@@ -93,7 +93,7 @@ namespace algos.Arrays
                 var currentMeeting = intervals[index];
                 for (int roomIndex = 0; roomIndex < output.Count; roomIndex++)
                 {
-                    if (output[roomIndex][1] < currentMeeting[0])
+                    if (output[roomIndex][1] <= currentMeeting[0])
                     {
                         usedExisting = true;
                         output[roomIndex] = currentMeeting;

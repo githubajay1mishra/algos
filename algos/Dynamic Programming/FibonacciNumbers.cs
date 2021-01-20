@@ -33,6 +33,66 @@ namespace algos.DynamicProgramming
 
         }
 
+        public int MinimumJumpsToEnd(int[] jumps)
+        {
+            return MinimumJumpsToEnd(jumps, 0, new Dictionary<int, int>());
+        }
+
+         public int MinimumJumpsToEnd(int[] jumps, int index, Dictionary<int, int> cache)
+        {
+            if(index == jumps.Length -1){
+                return 0;
+            }
+            if(index >= jumps.Length){
+                return int.MaxValue;
+            }
+
+            if(jumps[index] == 0){
+                return int.MaxValue;
+            }
+
+            if(cache.ContainsKey(index)){
+                return cache[index];
+            }
+
+            cache[index] = int.MaxValue;
+
+            for(int nextJump = 1; nextJump <= jumps[index]; ++nextJump){
+                var jumpsToEnd = MinimumJumpsToEnd(jumps, index + nextJump, cache);
+                if(jumpsToEnd != int.MaxValue){
+                    cache[index] = Math.Min(1 + jumpsToEnd, cache[index]);
+                }
+
+            }
+            return cache[index];
+        }
+
+        public int MinimumJumpsToEndWithFee(int[] fees)
+        {
+            return MinimumJumpsToEndWithFee(fees, 0, new Dictionary<int, int>());
+        }
+
+        public int MinimumJumpsToEndWithFee(int[] fees, int currentStair, Dictionary<int, int> cache){
+
+            if(currentStair > fees.Length){
+                return 0;
+            }
+
+            if(cache.ContainsKey(currentStair)){
+                return cache[currentStair];
+            }
+
+            var oneStepCost = MinimumJumpsToEndWithFee(fees, currentStair + 1, cache);
+            var twoStepCost = MinimumJumpsToEndWithFee(fees, currentStair + 2, cache);
+            var threeStepCost = MinimumJumpsToEndWithFee(fees, currentStair + 3, cache);
+
+
+
+            cache[currentStair] = fees[currentStair] +  Math.Min(Math.Min(oneStepCost, twoStepCost), threeStepCost);
+            return cache[currentStair];
+
+        }
+
         public int HouseThief(int[] profits)
         {
             return HouseThief(profits, 0, new Dictionary<int, int>());

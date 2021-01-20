@@ -24,5 +24,19 @@ namespace algos.test.DynamicProgramming
             Assert.Equal(18, new FibonacciNumbers().HouseThief(new int[]{2, 10, 14, 8, 1}));
 
         }
+
+        [Fact]
+        public void MinimumJumpsToEnd(){
+            Assert.Equal(3, new FibonacciNumbers().MinimumJumpsToEnd(new int[]{2,1,1,1,4}));
+            Assert.Equal(4, new FibonacciNumbers().MinimumJumpsToEnd(new int[]{1,1,3,6,9,3,0,1,3}));
+
+        }
+
+        [Fact]
+        public void MinimumJumpsWithFee(){
+            Assert.Equal(3, new FibonacciNumbers().MinimumJumpsToEndWithFee(new int[]{1,2,5,2,1,2}));
+            Assert.Equal(5, new FibonacciNumbers().MinimumJumpsToEndWithFee(new int[]{2,3,4,5}));
+
+        }
     }
 }

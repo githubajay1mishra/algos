@@ -71,6 +71,24 @@ Explanation: Because [23, 2, 6, 4, 7] is an continuous subarray of size 5 and su
    
     }
 
+       [Fact]
+    public void TestSudokuSolver()
+    {
+        int[] inputA= {2, 3, 6, 7, 9};
+        int[] inputB= {1, 4, 8, 10};
+        Assert.Equal(6, KthElement.KthElementInMergedArray(inputA, inputB, 5)); 
+
+        inputA= new[]{1, 10, 10, 25, 40, 54, 79}; 
+        inputB= new[]{15, 24, 27, 32, 33, 39, 48, 68, 82, 88, 90};
+        Assert.Equal(79, KthElement.KthElementInMergedArray(inputA, inputB, 15));                   
+
+        inputA= new[]{4,5,14,16,21,23,26,32,34,51,51,55,58,80,82,82,82,83,88,91,93,95,97}; 
+        inputB= new[]{7,9,9,10,11,11,11,12,15,16,16,17,19,21,22,22,23,26,26,26,27,28,29,29,29,31,33,33,35,37,38,38,40,40,44,50,51,52,52,54,55,56,58,58,61,61,63,64,67,70,71,72,77,77,77,78,78,82,83,83,83,84,84,84,86,86,87,88,89,89,91,91,91,93,94,96,98,98,98,99,100,100};
+        Assert.Equal(98, KthElement.KthElementInMergedArray(inputA, inputB, 102));                   
+
+   
+    }
+
 
 
 

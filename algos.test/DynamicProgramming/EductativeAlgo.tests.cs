@@ -51,5 +51,17 @@ public class SubsetSumTests{
     
     }
 
+    [Fact]
+     public void CombinationSum()
+    {
+        var expected = new int[][] {
+            new int[]{2,2,3}, 
+            new int[]{7}
+            };
+        Assert.Equal(expected, new CombinationSumSolution().CombinationSum(new int[] {2,3,6,7}, 7));
+
+    
+    }
+
 
 }

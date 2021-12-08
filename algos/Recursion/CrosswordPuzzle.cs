@@ -86,8 +86,6 @@ namespace algos.Recursion
             }
 
             var currentRange = ranges[currentRangeIndex];
-
-            var separator = ";";
            
 
 

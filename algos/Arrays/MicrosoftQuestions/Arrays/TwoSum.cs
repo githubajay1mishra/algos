@@ -1,6 +1,10 @@
 using System.Collections.Generic;
 
 public class Solution {
+    public Solution()
+    {
+    }
+
     public int[] TwoSum(int[] nums, int target) {
         Dictionary<int, int> previousValuesToIndex = new Dictionary<int, int>();
         

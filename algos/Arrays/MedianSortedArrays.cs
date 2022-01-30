@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-namespace algos.Array
+namespace algos.Arrays
 {
     public class MedianFinder{
         public float FindMedian(int[] nums1, int[] nums2){

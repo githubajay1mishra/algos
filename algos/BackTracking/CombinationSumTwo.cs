@@ -1,11 +1,15 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace algos.BackTracking
 {
-    public class CombinationSumOne
+    public class CombinationSumTwo
     {
+
         public IList<IList<int>> CombinationSum(int[] candidates, int target)
         {
+
+            Array.Sort(candidates);
             var combinations = new List<IList<int>>();
             CombinationSumInternal(candidates, target, 0, new List<int>(), combinations);
             return combinations;
@@ -13,12 +17,13 @@ namespace algos.BackTracking
 
         private void CombinationSumInternal(int[] candidates, int target, int current, IList<int> combination, IList<IList<int>> combinations)
         {
-            
 
-            if(target == 0)
+
+            if (target == 0)
             {
+
                 combinations.Add(new List<int>(combination));
-                return;
+
             }
 
             if (target < 0) return;
@@ -26,14 +31,15 @@ namespace algos.BackTracking
 
             for (int index = current; index < candidates.Length; index++)
             {
+                if (index > current && candidates[index] == candidates[index - 1]) continue;
                 combination.Add(candidates[index]);
-                CombinationSumInternal(candidates, target-candidates[index], index, combination, combinations);
+                CombinationSumInternal(candidates, target - candidates[index], index + 1, combination, combinations);
                 combination.RemoveAt(combination.Count - 1);
             }
 
         }
 
-       
+
     }
 }
 

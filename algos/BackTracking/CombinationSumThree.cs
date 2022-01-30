@@ -14,7 +14,6 @@ namespace algos.BackTracking
         }
         private void CombinationSumInternal(int remainingLength, int remainingSum, IList<int> combination, int currentNumber, IList<IList<int>> result)
         {
-            if (remainingLength < 0 || remainingSum < 0) { return; }
 
             if (remainingSum == 0)
             {
@@ -25,6 +24,9 @@ namespace algos.BackTracking
 
                 return;
             }
+
+            if (remainingLength < 0 || remainingSum < 0) { return; }
+
 
             for (int i = currentNumber; i <= 9; i++)
             {

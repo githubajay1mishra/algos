@@ -12,7 +12,6 @@ namespace algos.Permutations{
                  return 0;
              }
 
-             // sort the numbers
              Array.Sort(nums);
 
             var frequencyMap = new Dictionary<int, int>();

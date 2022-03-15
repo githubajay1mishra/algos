@@ -66,6 +66,92 @@ namespace algos.Strings
             }
         }
 
+
+        public (string term, int remainingValue) TryAddGeneric(int num, int convertValue, char romanChar, int subtractValue, char subtractChar)
+        {
+            string term = "";
+            var remainingValue = num;
+            if (num >= convertValue)
+            {
+                var repeatCount = num / convertValue;
+                term = new string(romanChar, repeatCount);
+                remainingValue = num % convertValue;
+            }
+            else if (num >= subtractValue)
+            {
+                term = string.Join("", subtractChar, romanChar);
+                remainingValue = num - subtractValue;
+            }
+
+
+            return (term, remainingValue);
+
+        }
+        public string IntToRoman(int num)
+        {
+            var result = "";
+            while(num > 0)
+            {
+               var resultM = TryAddGeneric(num, 1000, 'M', 900, 'C');
+                if(resultM.term != "")
+                {
+                    result += resultM.term;
+                    num = resultM.remainingValue;
+                    continue;
+                }
+
+                var resultD = TryAddGeneric(num, 500, 'D', 400, 'C');
+                if (resultD.term != "")
+                {
+                    result += resultD.term;
+                    num = resultD.remainingValue;
+                    continue;
+                }
+
+                var resultC = TryAddGeneric(num, 100, 'C', 90, 'X');
+                if (resultC.term != "")
+                {
+                    result += resultC.term;
+                    num = resultC.remainingValue;
+                    continue;
+                }
+
+                var resultL = TryAddGeneric(num, 50, 'L', 40, 'X');
+                if (resultL.term != "")
+                {
+                    result += resultL.term;
+                    num = resultL.remainingValue;
+                    continue;
+                }
+
+                var resultX = TryAddGeneric(num, 10, 'X', 9, 'I');
+                if (resultX.term != "")
+                {
+                    result += resultX.term;
+                    num = resultX.remainingValue;
+                    continue;
+                }
+
+                var resultV = TryAddGeneric(num, 5, 'V', 4, 'I');
+                if (resultV.term != "")
+                {
+                    result += resultV.term;
+                    num = resultV.remainingValue;
+                    continue;
+                }
+
+                result += new string('I', num / 1);
+                num = 0;
+
+
+            }
+
+            return result;
+        }
+
+        
+    
+
     }
 
 

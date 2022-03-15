@@ -27,8 +27,7 @@ namespace algos.test.Numbers
         public void Validate(int original, int reversed)
         {
 
-            var maxIntValueUnsigned = Math.Abs((uint)int.MaxValue);
-            var minIntValueUnsigned = maxIntValueUnsigned + 1;
+        
             Assert.Equal(reversed, new ReverseNumber().Reverse(original));
 
 
